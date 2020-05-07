@@ -1,0 +1,16 @@
+apiVersion: eksctl.io/v1alpha5
+kind: ClusterConfig
+
+metadata:
+   name: demo
+   region: us-west-2
+
+nodeGroups:
+    - name: ng-1 #cluster node group name
+      instanceType: t3.small #desired instance type
+      desiredCapacity: 3 #desired nodes count / capacity
+      ssh:
+        allow: true
+        publicKeyPath: ~/.ssh/pmittal.aws.pub
+
+                                                              
